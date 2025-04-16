@@ -1,0 +1,44 @@
+.xlsx-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 0 0;
+}
+.xlsx-upload-label {
+  position: relative;
+  cursor: pointer;
+}
+.xlsx-upload-label input[type="file"] {
+  display: none;
+}
+.xlsx-upload-btn {
+  background: rgba(0,255,240,0.18);
+  border: 1.5px solid #00fff0;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 8px 22px;
+  box-shadow: 0 0 16px #00fff0, 0 0 48px #00fff0 inset;
+  transition: all 0.2s cubic-bezier(.77,0,.18,1);
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00fff0, 0 0 2px #fff;
+  outline: none;
+}
+.xlsx-upload-btn:hover {
+  background: rgba(0,255,240,0.33);
+  color: #fff700;
+  border-color: #fff700;
+  box-shadow: 0 0 32px #fff700, 0 0 64px #00fff0 inset;
+}
+.xlsx-upload-filename {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 1em;
+  margin-left: 8px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,73 @@
+$primary: #00ffe7;
+$secondary: #0a0f2c;
+$glass: rgba(10, 15, 44, 0.7);
+
+.sorteo-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1f4c 0%, #0a0f2c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: $primary;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 24px #00ffe7cc;
+}
+
+.sorteo-btn {
+  background: $primary;
+  color: $secondary;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 32px #00ffe7aa;
+  margin-bottom: 3rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  &:hover:not([disabled]) {
+    background: #fff;
+    color: $secondary;
+    box-shadow: 0 8px 32px #00ffe7;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.animacion {
+  .ruleta {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    background: $glass;
+    box-shadow: 0 2px 24px #00ffe7cc;
+    color: $primary;
+    margin: 2rem 0;
+    animation: blink 0.7s infinite alternate;
+  }
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+.ganadores {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+}

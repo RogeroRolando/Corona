@@ -1,0 +1,7 @@
+<div class="xlsx-upload-container">
+  <label class="xlsx-upload-label">
+    <input type="file" (change)="onFileSelected($event)" accept=".xlsx,.xls" />
+    <span class="xlsx-upload-btn">Seleccionar archivo</span>
+  </label>
+  <span class="xlsx-upload-filename" *ngIf="fileName">{{ fileName }}</span>
+</div>

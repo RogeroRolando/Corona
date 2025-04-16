@@ -1,0 +1,37 @@
+<div class="sorteo-container">
+  <img src="assets/corona.png" alt="Escudo Corona FC" style="width: 120px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+  <h1>Sorteo de Pascua - CORONA FC 2025</h1>
+  <app-xlsx-upload (archivoCargado)="onArchivoCargado($event)"></app-xlsx-upload>
+  <div *ngIf="archivoCargado()" class="archivo-ok">¡Archivo cargado exitosamente!</div>
+  <div *ngIf="archivoCargado()" class="preview-glass">
+    <h3 class="preview-title">Vista previa de números cargados</h3>
+    <div class="preview-total">Total de números vendidos: {{ numerosVendidos().length }}</div>
+    <div class="preview-grid">
+      <div class="preview-header preview-cell">Número</div>
+      <div class="preview-header preview-cell">Vendedor</div>
+      <ng-container *ngFor="let item of previewPaginaActual">
+        <div class="preview-cell preview-num">{{item.numero}}</div>
+        <div class="preview-cell preview-vend">{{item.vendedor}}</div>
+      </ng-container>
+    </div>
+    <div class="preview-pagination" *ngIf="totalPaginas > 1">
+      <button class="preview-page-btn" (click)="irPaginaAnterior()" [disabled]="paginaActual() === 1">&lt;</button>
+      <span class="preview-page-info">Página {{paginaActual()}} de {{totalPaginas}}</span>
+      <button class="preview-page-btn" (click)="irPaginaSiguiente()" [disabled]="paginaActual() === totalPaginas">&gt;</button>
+    </div>
+  </div>
+  <button class="sorteo-btn" (click)="sortear()" [disabled]="sorteando() || !numerosVendidos().length">¡Sortear!</button>
+
+  <div class="animacion" *ngIf="sorteando()">
+    <div class="ruleta">Sorteando...</div>
+  </div>
+
+  <div class="ganadores" *ngIf="!sorteando() && ganadores().length">
+    <app-ganador-card
+      *ngFor="let ganador of ganadores(); let i = index"
+      [ganador]="ganador"
+      [lugar]="i + 1"
+      [ngClass]="i === 0 ? 'ganador-primer-lugar' : 'ganador-anim'">
+    </app-ganador-card>
+  </div>
+</div>
