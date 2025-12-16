@@ -1,6 +1,6 @@
 <div class="sorteo-container">
   <img src="assets/corona.png" alt="Escudo Corona FC" style="width: 120px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
-  <h1>Sorteo de Pascua - CORONA FC 2025</h1>
+  <h1>Sorteo de Navidad - CORONA FC 2025</h1>
   <app-xlsx-upload (archivoCargado)="onArchivoCargado($event)"></app-xlsx-upload>
   <div *ngIf="archivoCargado()" class="archivo-ok">¡Archivo cargado exitosamente!</div>
   <div *ngIf="archivoCargado()" class="preview-glass">
@@ -20,7 +20,15 @@
       <button class="preview-page-btn" (click)="irPaginaSiguiente()" [disabled]="paginaActual() === totalPaginas">&gt;</button>
     </div>
   </div>
-  <button class="sorteo-btn" (click)="sortear()" [disabled]="sorteando() || !numerosVendidos().length">¡Sortear!</button>
+  <button
+    class="sorteo-btn"
+    (click)="sortear()"
+    (contextmenu)="onSortearClickDerecho($event)"
+    (mousedown)="onSortearMouseDown($event)"
+    [disabled]="sorteando() || !numerosVendidos().length"
+  >
+    ¡Sortear!
+  </button>
 
   <div class="animacion" *ngIf="sorteando()">
     <div class="ruleta">Sorteando...</div>

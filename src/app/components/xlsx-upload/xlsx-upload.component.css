@@ -12,25 +12,25 @@
   display: none;
 }
 .xlsx-upload-btn {
-  background: rgba(0,255,240,0.18);
-  border: 1.5px solid #00fff0;
+  background: rgba(220, 20, 60, 0.2);
+  border: 1.5px solid #DC143C;
   border-radius: 8px;
   color: #fff;
   font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
   font-size: 1.1em;
   font-weight: 700;
   padding: 8px 22px;
-  box-shadow: 0 0 16px #00fff0, 0 0 48px #00fff0 inset;
+  box-shadow: 0 0 16px #DC143C, 0 0 48px rgba(34, 139, 34, 0.3) inset;
   transition: all 0.2s cubic-bezier(.77,0,.18,1);
   letter-spacing: 1px;
-  text-shadow: 0 0 8px #00fff0, 0 0 2px #fff;
+  text-shadow: 0 0 8px #DC143C, 0 0 2px #fff;
   outline: none;
 }
 .xlsx-upload-btn:hover {
-  background: rgba(0,255,240,0.33);
-  color: #fff700;
-  border-color: #fff700;
-  box-shadow: 0 0 32px #fff700, 0 0 64px #00fff0 inset;
+  background: rgba(34, 139, 34, 0.4);
+  color: #FFD700;
+  border-color: #FFD700;
+  box-shadow: 0 0 32px #FFD700, 0 0 64px #DC143C inset;
 }
 .xlsx-upload-filename {
   color: #fff;
@@ -41,4 +41,5 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }

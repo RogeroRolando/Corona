@@ -1,12 +1,16 @@
-$primary: #00ffe7;
-$glass: rgba(10, 15, 44, 0.7);
+$primary: #DC143C;
+$secondary: #228B22;
+$gold: #FFD700;
+$glass: rgba(0, 0, 0, 0.8);
 
 .ganador-card {
   background: $glass;
   border-radius: 2rem;
-  box-shadow: 0 4px 32px #00ffe7aa;
+  box-shadow: 0 4px 32px #DC143Caa, 0 0 48px rgba(139, 0, 0, 0.4);
+  border: 2px solid rgba(220, 20, 60, 0.6);
+  border-top: 2px solid rgba(139, 0, 0, 0.7);
   padding: 2.5rem 2rem;
-  color: $primary;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,14 +25,16 @@ $glass: rgba(10, 15, 44, 0.7);
     font-weight: bold;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
-    text-shadow: 0 2px 24px #00ffe7cc;
+    text-shadow: 0 2px 24px #DC143Ccc, 0 0 32px #FFD700;
+    color: $gold;
   }
 
   .premio {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    text-shadow: 0 1px 12px #00ffe799;
+    text-shadow: 0 1px 12px #228B22aa, 0 0 16px #DC143C;
+    color: $secondary;
   }
 
   .numero {
@@ -36,12 +42,15 @@ $glass: rgba(10, 15, 44, 0.7);
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 24px #00ffe7cc;
+    text-shadow: 0 2px 24px #DC143Ccc, 0 0 40px #FFD700;
+    color: $primary;
   }
 
   .vendedor {
     font-size: 1rem;
     opacity: 0.85;
     margin-top: 0.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
   }
 }

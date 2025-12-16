@@ -1,10 +1,11 @@
-$primary: #00ffe7;
-$secondary: #0a0f2c;
-$glass: rgba(10, 15, 44, 0.7);
+$primary: #DC143C;
+$secondary: #228B22;
+$gold: #FFD700;
+$glass: rgba(13, 40, 24, 0.7);
 
 .sorteo-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1f4c 0%, #0a0f2c 100%);
+  background: linear-gradient(135deg, #000000 0%, #8B0000 30%, #DC143C 70%, #000000 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,26 +18,27 @@ h1 {
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 2rem;
-  text-shadow: 0 2px 24px #00ffe7cc;
+  text-shadow: 0 2px 24px #DC143Ccc, 0 0 32px #228B22, 0 0 40px #FFD700;
 }
 
 .sorteo-btn {
-  background: $primary;
-  color: $secondary;
+  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+  color: #fff;
   border: none;
   border-radius: 2rem;
   padding: 1rem 2.5rem;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
-  box-shadow: 0 4px 32px #00ffe7aa;
+  box-shadow: 0 4px 32px #DC143Caa, 0 0 48px rgba(34, 139, 34, 0.4);
   margin-bottom: 3rem;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
   &:hover:not([disabled]) {
-    background: #fff;
-    color: $secondary;
-    box-shadow: 0 8px 32px #00ffe7;
+    background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px #FFD700, 0 0 64px #DC143C;
   }
   &:disabled {
     opacity: 0.6;
@@ -51,10 +53,11 @@ h1 {
     padding: 2rem 4rem;
     border-radius: 2rem;
     background: $glass;
-    box-shadow: 0 2px 24px #00ffe7cc;
-    color: $primary;
+    box-shadow: 0 2px 24px #DC143Ccc, 0 0 48px rgba(34, 139, 34, 0.3);
+    color: $gold;
     margin: 2rem 0;
     animation: blink 0.7s infinite alternate;
+    text-shadow: 0 0 12px #DC143C, 0 0 24px #228B22;
   }
 }
 
